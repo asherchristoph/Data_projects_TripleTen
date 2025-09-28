@@ -1,0 +1,3 @@
+Good Seed has requested help in creating a model to verify ages of customers buying alcohol. They have provided data with image-label pairs to train the model. We will be perfroming EDA to identify age distributions and outliers, then training the model using the ResNet50 framework.
+This project utilized the Tensorflow library to create a model capable of verifying the age of a customer purchasing alcohol.  Given the provided image-label pairs, and relevant age data, EDA revealed the age distribution of provided image-label pairs peaked 29 within the total range of 4-100, with the relevant distribution being 20-41.  Focusing on that group allowed for intentional training of the model, keeping processing time to a minimum and accuracy high.
+[Script and model creation]
