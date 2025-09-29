@@ -1,6 +1,18 @@
 Zyfra, a heavy industry and mining company, has requested a prototype model for predicting the amount of gold recovered from their gold ore. They have provided datasets regarding the purification values of gold (au), silver (ag), and lead (pb) at different stages of purification. This project will be focused on investigating the data to discover the best model to deliver the optimum results, using sMAPE, Linear Regression, and Random Forest models.
 
-Performed basic EDA to resolve missing values, duplicates, and outliers.  Plotted histograms to show the concentration of Gold, Silver, and Lead increasing as the mixtures pass through the various stages of cleaning.  As expected, the raw feed showed the lowest concentration of metal particulates, and the final cleaning stage showed the highest.  sMAPE was the scoring metric for determining the best model, starting with Linear Regression for the baseline, which returned sMAPE of 10.17.  The Random Forest Regressor returned sMAPE of 8.26 before tuning, and 8.13 after tuning.  The training data was then passed to the tuned Random Forest Regressor model, before using the test sets to predict rough metal and final metal concentrations.  
+Performed basic EDA to resolve missing values, duplicates, and outliers. As expected, the raw feed showed the lowest concentration of metal particulates, and the final cleaning stage showed the highest.  
+![Concentration by stage](assets/IP2_github_concentrationbystage.png)
+
+sMAPE was the scoring metric for determining the best model, starting with Linear Regression for the baseline, which returned sMAPE of 10.17.  
+![sMAPE definition](assets/IP2_github_smape.png)
+![Linear Regression](assets/IP2_github_LR.png)
+
+The Random Forest Regressor returned sMAPE of 8.26 before tuning, and 8.13 after tuning.  
+![Random Forest Regressor](assets/IP2_github_RFRegressor.png)
+![Tuned Random Forest Regressor](assets/IP2_github_tunedRF.png)
+
+The training data was then passed to the tuned Random Forest Regressor model, before using the test sets to predict rough metal and final metal concentrations.
+![Predictions](assets/IP2_github_RFpredictions.png)
 
 This model generated valuable concentration thresholds based on previous metal data, which will allow Zyfra to increase production while cutting costs by selecting drilling sites containing ore deposits with the highest predicted concentration of recovered metals.  
 
